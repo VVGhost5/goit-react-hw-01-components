@@ -1,0 +1,22 @@
+.statList {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 90px;
+  background-color: rgb(197, 195, 195);
+  list-style: none;
+}
+
+.label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.percentage {
+  display: block;
+  margin-bottom: 10px;
+}
