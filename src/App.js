@@ -5,10 +5,10 @@ import Statitics from "./components/Statitics/Statitics";
 import FriendList from "./components/FriendList/FriendList";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
-import userData from "./user.json";
-import statisticalData from "./statistical-data.json";
-import friends from "./friends.json";
-import transactions from "./transactions.json";
+import userData from "./data/user.json";
+import statisticalData from "./data/statistical-data.json";
+import friends from "./data/friends.json";
+import transactions from "./data/transactions.json";
 
 export default function App() {
   const { name, tag, location, avatar, stats } = userData;

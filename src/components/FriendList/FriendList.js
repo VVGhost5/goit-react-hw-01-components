@@ -1,20 +1,26 @@
 import PropTypes from "prop-types";
 import styles from "./FriendList.module.css";
+import classNames from "classnames";
+// var classNames = require('classnames');
 
 const FriendList = ({ friends }) => {
-  console.log(friends);
   return (
     <ul className={styles.friendList}>
-      {friends.map((friend) => {
-        const { name, id, isOnline, avatar } = friend;
+      {friends.map(({ name, id, isOnline, avatar }) => {
+        // const statusIndicator = classNames(
+        //   "styles.status",
+        //   { "styles.online": isOnline },
+        //   { "styles.offline": !isOnline }
+        // );
+        console.log(typeof statusIndicator);
         return (
           <li key={id} className={styles.item}>
             <span
-              className={
-                styles.status +
-                " " +
-                (isOnline ? styles.online : styles.offline)
-              }
+              className={classNames(
+                styles.status,
+                { [styles.online]: isOnline },
+                { [styles.offline]: !isOnline }
+              )}
             ></span>
             <img className={styles.avatar} src={avatar} alt={name} width="48" />
             <p className={styles.name}>{name}</p>

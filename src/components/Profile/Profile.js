@@ -20,9 +20,9 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
       <ul className={styles.stats}>
         {Object.keys(stats).map((el) => {
           return (
-            <li className={styles.item}>
+            <li key={el} className={styles.item}>
               <span className={styles.label}>{el}</span>
-              <span className={styles.quantity}>{stats.followers}</span>
+              <span className={styles.quantity}>{stats[el]}</span>
             </li>
           );
         })}
